@@ -7,19 +7,75 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://unpkg.com/systemjs@0.21.6/dist/system.js"></script>
   <title>vuejjjjj</title>
-  <style>
+ <!-- <style>
     .loader{
       position: absolute;
       top: 50%;
       left: 50%;
+      font-size:2rem;
       transform: translate(-50%,-50%);
+      background: #6C75E0;
     }
-    .loader .bubble{
-      height: 40px;
-      width: 40px;
+    .loader::after{
+      content: '';
+      height: 1.5rem;
       border-radius:50%;
-      background:#33343D;
-    }
+      width: 1.5rem;
+      background-color: #3E3F4A;
+      position: absolute;
+      top: 30px;
+      left: 117px;
+      animation-duration: 1s;
+      animation-iteration-count:3;
+      animation-name: bounce-7;
+      animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+      }
+      @keyframes bounce-7 {
+      0% { transform: scale(1,1) translateY(0); }
+      10% { transform: scale(1.1,.9) translateY(0); }
+      30% { transform: scale(.9,1.1) translateY(-100px); }
+      50% { transform: scale(1.05,.95) translateY(0); }
+      57% { transform: scale(1,1) translateY(-7px); }
+      64% { transform: scale(1,1) translateY(0); }
+      100% { transform: scale(110) translateY(-2px); }
+      }
+  </style> -->
+  <style type="text/css" media="all">
+  .loader{
+    background: black;
+  }
+    .lds-hourglass {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+
   </style>
 </head>
 <body>
@@ -29,7 +85,7 @@
   </noscript>
   <div id="app">
     <div class="loader">
-      <h1>Loadlng</h1><div class="bubble"></div>
+      <div class="lds-hourglass"></div>
     </div>
   </div>
   <script src="systemjs.config.js"></script>

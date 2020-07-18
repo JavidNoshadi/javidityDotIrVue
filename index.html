@@ -7,14 +7,31 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://unpkg.com/systemjs@0.21.6/dist/system.js"></script>
   <title>vuejjjjj</title>
+  <style>
+    .loader{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+    .loader .bubble{
+      height: 40px;
+      width: 40px;
+      border-radius:50%;
+      background:#33343D;
+    }
+  </style>
 </head>
-
 <body>
   <noscript>
     <strong>We're sorry but vuejjjjj doesn't work properly without JavaScript enabled.
       Please enable it to continue.</strong>
   </noscript>
-  <div id="app">vuejjjjj is loading...</div>
+  <div id="app">
+    <div class="loader">
+      <h1>Loadlng</h1><div class="bubble"></div>
+    </div>
+  </div>
   <script src="systemjs.config.js"></script>
 </body>
 
